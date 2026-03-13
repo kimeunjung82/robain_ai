@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>ROBAINTECH - ROBOT AI HUMAN</title>
-  <meta name="description" content="ROBAINTECH - Leading the future of AIoT safety and industrial robotics.">
-  <meta name="keywords" content="Robaintech, AIoT, Industrial Safety, Robot, AI">
+  <title>ROBAINTECH — Robot, AI and Human</title>
+  <meta name="description" content="Robot, AI 그리고 사람. 그 중심에서 서로의 가치를 잇다. — 주식회사 로바인텍">
+  <meta name="keywords" content="로바인텍, ROBAINTECH, Safe-Link, AIoT, 건설안전, 중대재해처벌법, 산업안전">
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -20,25 +20,156 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    .lang-switcher { display: flex; align-items: center; gap: 4px; margin-left: 12px; }
-    .lang-btn { background: transparent; border: 1.5px solid rgba(255,255,255,0.5); color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 4px; cursor: pointer; letter-spacing: 0.5px; transition: all 0.2s ease; line-height: 1.4; }
-    .lang-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; color: #fff; }
-    .lang-btn.active { background: #47b2e4; border-color: #47b2e4; color: #fff; }
-    .scrolled .lang-btn { border-color: rgba(40,58,90,0.4); color: rgba(40,58,90,0.7); }
-    .scrolled .lang-btn.active, .scrolled .lang-btn:hover { background: #47b2e4; border-color: #47b2e4; color: #fff; }
-    html[lang="ko"] body { font-family: 'Noto Sans KR', 'Open Sans', sans-serif; }
-    [data-lang] { display: none !important; }
-    html[lang="en"] [data-lang="en"] { display: revert !important; }
-    html[lang="ko"] [data-lang="ko"] { display: revert !important; }
+    /* ═══════════════════════════════ LANGUAGE SWITCHER ═══════════════════════════════ */
+    .lang-switcher { display:flex; align-items:center; gap:4px; margin-left:12px; }
+    .lang-btn { background:transparent; border:1.5px solid rgba(255,255,255,0.5); color:rgba(255,255,255,0.85); font-size:12px; font-weight:600; padding:3px 9px; border-radius:4px; cursor:pointer; letter-spacing:0.5px; transition:all 0.2s ease; line-height:1.4; }
+    .lang-btn:hover { background:rgba(255,255,255,0.15); border-color:#fff; color:#fff; }
+    .lang-btn.active { background:#47b2e4; border-color:#47b2e4; color:#fff; }
+    .scrolled .lang-btn { border-color:rgba(40,58,90,0.4); color:rgba(40,58,90,0.7); }
+    .scrolled .lang-btn.active, .scrolled .lang-btn:hover { background:#47b2e4; border-color:#47b2e4; color:#fff; }
+
+    /* ═══════════════════════════════ LANGUAGE VISIBILITY ═══════════════════════════════ */
+    [data-lang] { display:none !important; }
+    html[lang="en"] [data-lang="en"] { display:revert !important; }
+    html[lang="ko"] [data-lang="ko"] { display:revert !important; }
+    html[lang="ko"] body { font-family:'Noto Sans KR','Open Sans',sans-serif; }
+
+    /* ═══════════════════════════════ HERO ENHANCEMENTS ═══════════════════════════════ */
+    .hero-tag { display:inline-block; background:rgba(71,178,228,0.18); border:1px solid rgba(71,178,228,0.4); color:#7dd4f5; font-size:0.78rem; font-weight:600; letter-spacing:0.8px; text-transform:uppercase; padding:4px 12px; border-radius:20px; margin-bottom:16px; }
+    .hero-motto-bar { border-left:4px solid #47b2e4; padding:10px 0 10px 18px; margin:18px 0 26px; }
+    .hero-motto-bar .motto-main { font-size:1.22rem; font-weight:700; color:#fff; line-height:1.5; }
+    html[lang="ko"] .hero-motto-bar .motto-main { font-family:'Noto Sans KR',sans-serif; font-size:1.1rem; }
+    .hero-motto-bar .motto-desc { font-size:0.88rem; color:rgba(255,255,255,0.62); margin-top:7px; line-height:1.65; }
+    .btn-hero-outline { display:inline-flex; align-items:center; gap:6px; background:transparent; border:2px solid rgba(255,255,255,0.4); color:rgba(255,255,255,0.85); padding:10px 22px; border-radius:30px; font-size:0.88rem; font-weight:600; text-decoration:none; transition:all 0.25s ease; margin-left:10px; }
+    .btn-hero-outline:hover { border-color:#fff; color:#fff; background:rgba(255,255,255,0.08); }
+
+    /* ═══════════════════════════════ PARTNERS STRIP ═══════════════════════════════ */
+    .partners-eyebrow { text-align:center; font-size:0.74rem; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#9ab8d4; margin-bottom:20px; }
+
+    /* ═══════════════════════════════ VISION / MISSION / VALUES ═══════════════════════════════ */
+    #vision-section { background:linear-gradient(160deg,#f5f9ff 0%,#eaf3fc 100%); }
+    .motto-headline { font-size:1.6rem; font-weight:800; color:#1a3a5c; text-align:center; line-height:1.45; max-width:720px; margin:0 auto 10px; }
+    html[lang="ko"] .motto-headline { font-family:'Noto Sans KR',sans-serif; font-size:1.4rem; }
+    .motto-sub-text { text-align:center; color:#5a7fa0; font-size:0.96rem; max-width:600px; margin:0 auto 48px; line-height:1.75; }
+    .vmv-card { background:#fff; border-radius:16px; padding:32px 26px 28px; height:100%; box-shadow:0 4px 28px rgba(20,50,90,0.07); transition:transform 0.28s ease,box-shadow 0.28s ease; position:relative; overflow:hidden; }
+    .vmv-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+    .vmv-card.v-vision::before  { background:linear-gradient(90deg,#47b2e4,#2e9fd8); }
+    .vmv-card.v-mission::before { background:linear-gradient(90deg,#2e7fd4,#1a5fa8); }
+    .vmv-card.v-values::before  { background:linear-gradient(90deg,#1a5fa8,#0d3d7a); }
+    .vmv-card:hover { transform:translateY(-7px); box-shadow:0 16px 48px rgba(20,50,90,0.13); }
+    .vmv-icon-wrap { width:52px; height:52px; border-radius:13px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:18px; }
+    .vmv-card.v-vision  .vmv-icon-wrap { background:#e6f5fc; color:#47b2e4; }
+    .vmv-card.v-mission .vmv-icon-wrap { background:#ddeeff; color:#2e7fd4; }
+    .vmv-card.v-values  .vmv-icon-wrap { background:#d6e8ff; color:#1a5fa8; }
+    .vmv-card h4 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:#9ab8d4; margin-bottom:8px; }
+    .vmv-card h3 { font-size:1.12rem; font-weight:700; color:#1a3a5c; margin-bottom:14px; line-height:1.42; }
+    html[lang="ko"] .vmv-card h3 { font-family:'Noto Sans KR',sans-serif; font-size:1rem; }
+    .vmv-card p { font-size:0.9rem; color:#5a7a9a; line-height:1.75; margin:0; }
+    .values-list { list-style:none; padding:0; margin:0; }
+    .values-list li { display:flex; align-items:flex-start; gap:9px; padding:9px 0; border-bottom:1px solid #f0f5fb; font-size:0.89rem; color:#4a6a8a; }
+    .values-list li:last-child { border-bottom:none; }
+    .values-list li i { color:#47b2e4; font-size:0.98rem; flex-shrink:0; margin-top:2px; }
+    .values-list li strong { color:#1a3a5c; }
+
+    /* ═══════════════════════════════ CAPABILITY ═══════════════════════════════ */
+    #capability-section { background:#fff; }
+    .stat-row { border-radius:16px; background:linear-gradient(135deg,#f0f7ff,#e4eff9); padding:26px 20px; margin-bottom:52px; }
+    .stat-item { text-align:center; padding:6px 0; }
+    .stat-item .num { display:block; font-size:2.3rem; font-weight:800; color:#2e7fd4; line-height:1; font-family:'Poppins',sans-serif; }
+    .stat-item .unit { font-size:0.95rem; font-weight:600; color:#47b2e4; }
+    .stat-item .lbl { display:block; font-size:0.8rem; color:#7a9ab8; margin-top:5px; }
+    .cap-list { list-style:none; padding:0; margin:0; }
+    .cap-list li { display:flex; align-items:flex-start; gap:15px; padding:16px 0; border-bottom:1px solid #f0f5fa; }
+    .cap-list li:last-child { border-bottom:none; }
+    .cap-icon { width:42px; height:42px; flex-shrink:0; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:1.15rem; }
+    .cap-icon.c1 { background:#e6f5fc; color:#47b2e4; }
+    .cap-icon.c2 { background:#e0eefa; color:#2e9fd8; }
+    .cap-icon.c3 { background:#dae8f8; color:#2e7fd4; }
+    .cap-icon.c4 { background:#d3e2f6; color:#2265c8; }
+    .cap-icon.c5 { background:#ccdbf3; color:#1a5fa8; }
+    .cap-list li h5 { font-size:0.95rem; font-weight:700; color:#1a3a5c; margin:0 0 4px; }
+    html[lang="ko"] .cap-list li h5 { font-family:'Noto Sans KR',sans-serif; }
+    .cap-list li p { font-size:0.86rem; color:#6a8aaa; margin:0; line-height:1.62; }
+    .tech-pills { display:flex; flex-wrap:wrap; gap:7px; margin-top:26px; }
+    .tech-pill { display:inline-flex; align-items:center; gap:5px; background:#f0f7ff; border:1px solid #c8dff0; border-radius:20px; padding:5px 13px; font-size:0.81rem; font-weight:600; color:#2e7fd4; }
+
+    /* ═══════════════════════════════ PRODUCTS ═══════════════════════════════ */
+    #products-section { background:linear-gradient(160deg,#eef5fd 0%,#e4eff9 100%); }
+    .product-card { background:#fff; border-radius:20px; overflow:hidden; box-shadow:0 6px 32px rgba(20,50,90,0.09); height:100%; display:flex; flex-direction:column; transition:transform 0.3s ease,box-shadow 0.3s ease; border:1px solid rgba(71,178,228,0.1); }
+    .product-card:hover { transform:translateY(-9px); box-shadow:0 20px 55px rgba(20,50,90,0.16); }
+    .pcard-header { padding:26px 24px 20px; position:relative; overflow:hidden; }
+    .pcard-header::after { content:''; position:absolute; right:-30px; top:-30px; width:120px; height:120px; border-radius:50%; background:rgba(255,255,255,0.07); }
+    .pcard-header.th-safe  { background:linear-gradient(135deg,#1a3a5c 0%,#2e7fd4 100%); }
+    .pcard-header.th-crane { background:linear-gradient(135deg,#1e4d30 0%,#2a8050 100%); }
+    .pcard-header.th-next  { background:linear-gradient(135deg,#4a5568 0%,#718096 100%); }
+    .pcard-icon { width:50px; height:50px; background:rgba(255,255,255,0.15); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.45rem; color:#fff; margin-bottom:13px; }
+    .pcard-header h3 { font-size:1.28rem; font-weight:800; color:#fff; margin:0 0 4px; }
+    .pcard-sub { font-size:0.81rem; color:rgba(255,255,255,0.66); margin:0; }
+    .pcard-status { display:inline-flex; align-items:center; gap:5px; font-size:0.71rem; font-weight:700; letter-spacing:0.4px; padding:4px 10px; border-radius:20px; margin-top:9px; }
+    .pcard-status::before { content:''; width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+    .st-live  { background:rgba(80,230,140,0.2); color:#2eca6a; }
+    .st-live::before  { background:#2eca6a; }
+    .st-dev   { background:rgba(250,190,50,0.2); color:#d4a800; }
+    .st-dev::before   { background:#d4a800; }
+    .st-soon  { background:rgba(160,180,210,0.2); color:#8aaccc; }
+    .st-soon::before  { background:#8aaccc; }
+    .pcard-body { padding:22px 24px 6px; flex:1; }
+    .pcard-desc { font-size:0.9rem; color:#527090; line-height:1.72; margin-bottom:16px; }
+    .pcard-feats { list-style:none; padding:0; margin:0 0 16px; }
+    .pcard-feats li { display:flex; align-items:center; gap:9px; font-size:0.87rem; color:#4a6880; padding:6px 0; border-bottom:1px solid #f2f6fb; }
+    .pcard-feats li:last-child { border-bottom:none; }
+    .pcard-feats li i { color:#47b2e4; font-size:0.9rem; flex-shrink:0; }
+    .pcard-tags { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:6px; }
+    .ptag { font-size:0.73rem; font-weight:600; padding:3px 10px; border-radius:12px; }
+    .ptag-blue  { background:#e5f2fc; color:#2e7fd4; }
+    .ptag-green { background:#e5f7ee; color:#2a8050; }
+    .ptag-gray  { background:#edf0f4; color:#718096; }
+    .pcard-footer { padding:14px 24px 22px; }
+    .pcard-link { display:inline-flex; align-items:center; gap:6px; font-size:0.87rem; font-weight:600; color:#2e7fd4; text-decoration:none; transition:gap 0.2s,color 0.2s; }
+    .pcard-link:hover { gap:10px; color:#1a5fa8; }
+    .pcard-link.muted { color:#9ab8cc; }
+    .pcard-link.muted:hover { color:#7a9ab8; }
+    .product-card.ph-card { border:2px dashed rgba(71,178,228,0.25); background:rgba(248,252,255,0.7); box-shadow:none; }
+    .product-card.ph-card:hover { box-shadow:0 8px 30px rgba(20,50,90,0.06); }
+    .ph-body { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:36px 22px; flex:1; }
+    .ph-body i { font-size:2.8rem; color:#b0cce0; margin-bottom:14px; }
+    .ph-body p { font-size:0.89rem; color:#9ab8cc; line-height:1.72; }
+
+    /* ═══════════════════════════════ LAW CTA ═══════════════════════════════ */
+    .law-cta-wrap { padding:60px 0; background:#fff; }
+    .law-cta-inner { background:linear-gradient(135deg,#162d4e 0%,#1e5099 100%); border-radius:22px; padding:48px 44px; position:relative; overflow:hidden; color:#fff; }
+    .law-cta-inner::before { content:''; position:absolute; right:-80px; top:-80px; width:280px; height:280px; border-radius:50%; background:rgba(255,255,255,0.04); }
+    .law-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.22); border-radius:20px; padding:5px 14px; font-size:0.79rem; font-weight:600; color:rgba(255,255,255,0.86); margin-bottom:16px; }
+    .law-cta-inner h3 { font-size:1.55rem; font-weight:800; line-height:1.35; margin-bottom:13px; }
+    html[lang="ko"] .law-cta-inner h3 { font-family:'Noto Sans KR',sans-serif; font-size:1.35rem; }
+    .law-cta-inner p { color:rgba(255,255,255,0.74); font-size:0.95rem; line-height:1.75; margin-bottom:0; }
+    .btn-cta-light { display:inline-flex; align-items:center; gap:8px; background:#fff; color:#1a4e9a; font-weight:700; font-size:0.94rem; padding:13px 26px; border-radius:30px; text-decoration:none; transition:all 0.25s ease; white-space:nowrap; }
+    .btn-cta-light:hover { background:#e8f0fb; color:#122f6e; transform:translateY(-2px); }
+
+    /* ═══════════════════════════════ PROCESS ═══════════════════════════════ */
+    #process-section { background:linear-gradient(180deg,#f5f9ff 0%,#fff 100%); }
+    .process-card { background:#fff; border-radius:14px; padding:22px 20px; box-shadow:0 3px 20px rgba(20,50,90,0.07); display:flex; align-items:flex-start; gap:16px; height:100%; transition:box-shadow 0.25s,transform 0.25s; }
+    .process-card:hover { box-shadow:0 10px 36px rgba(20,50,90,0.13); transform:translateY(-4px); }
+    .proc-num { width:42px; height:42px; flex-shrink:0; background:linear-gradient(135deg,#47b2e4,#2e7fd4); border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:1rem; font-weight:800; color:#fff; font-family:'Poppins',sans-serif; }
+    .process-card h5 { font-size:0.95rem; font-weight:700; color:#1a3a5c; margin:0 0 5px; }
+    html[lang="ko"] .process-card h5 { font-family:'Noto Sans KR',sans-serif; }
+    .process-card p { font-size:0.86rem; color:#6a8aaa; margin:0; line-height:1.65; }
+
+    /* ═══════════════════════════════ RESPONSIVE ═══════════════════════════════ */
+    @media(max-width:768px) {
+      .motto-headline { font-size:1.2rem; }
+      .law-cta-inner { padding:32px 22px; }
+      .law-cta-inner h3 { font-size:1.15rem; }
+    }
   </style>
 </head>
 
 <body class="index-page">
 
+  <!-- HEADER -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -47,9 +178,11 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active"><span data-lang="en">Home</span><span data-lang="ko">홈</span></a></li>
-          <li><a href="#about"><span data-lang="en">Identity</span><span data-lang="ko">기업 정체성</span></a></li>
-          <li><a href="#skills"><span data-lang="en">Technology</span><span data-lang="ko">기술 역량</span></a></li>
-          <li><a href="#services"><span data-lang="en">Business Areas</span><span data-lang="ko">사업 영역</span></a></li>
+          <li><a href="#vision-section"><span data-lang="en">Vision</span><span data-lang="ko">비전</span></a></li>
+          <li><a href="#capability-section"><span data-lang="en">Capability</span><span data-lang="ko">역량</span></a></li>
+          <li><a href="#products-section"><span data-lang="en">Products</span><span data-lang="ko">제품</span></a></li>
+          <li><a href="#process-section"><span data-lang="en">Process</span><span data-lang="ko">개발과정</span></a></li>
+          <li><a href="#faq-section"><span data-lang="en">FAQ</span><span data-lang="ko">FAQ</span></a></li>
           <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="ko">문의</span></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -58,219 +191,643 @@
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
         <button class="lang-btn" id="btn-ko" onclick="setLang('ko')">KO</button>
       </div>
-      <a class="btn-getstarted" href="#about">
-        <span data-lang="en">Company Profile</span><span data-lang="ko">회사 소개서</span>
+      <a class="btn-getstarted" href="#contact">
+        <span data-lang="en">Contact Us</span><span data-lang="ko">문의하기</span>
       </a>
     </div>
   </header>
 
   <main class="main">
 
+    <!-- ══ HERO ══ -->
     <section id="hero" class="hero section dark-background">
       <div class="container">
-        <div class="row gy-4">
+        <div class="row gy-4 align-items-center">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-            <h1 data-lang="en">Innovating Safety with Robot & AI</h1>
-            <h1 data-lang="ko">로봇과 AI로 만드는<br>안전한 미래, 로바인텍</h1>
-            <p data-lang="en">ROBAINTECH is an AIoT technology startup dedicated to harmonizing Robots, AI, and Humans for a safer industrial ecosystem.</p>
-            <p data-lang="ko">로바인텍은 로봇·AI·인간이 공존하는 안전한 산업 생태계를 위해 끊임없이 혁신하는 AIoT 기술 전문 기업입니다.</p>
-            <div class="d-flex">
-              <a href="#about" class="btn-get-started">
-                <span data-lang="en">Our Identity</span><span data-lang="ko">기업 가치 보기</span>
+
+            <span class="hero-tag" data-lang="en">AIoT Industrial Safety · 주식회사 로바인텍</span>
+            <span class="hero-tag" data-lang="ko">AIoT 산업안전 전문 스타트업 · 주식회사 로바인텍</span>
+
+            <h1 data-lang="en">Robot, AI<br>and <span style="color:#47b2e4;">Human</span>.</h1>
+            <h1 data-lang="ko">Robot, AI<br>그리고 <span style="color:#47b2e4;">사람</span>.</h1>
+
+            <div class="hero-motto-bar">
+              <div class="motto-main" data-lang="en">"Connecting each other's value at the center."</div>
+              <div class="motto-main" data-lang="ko">"그 중심에서 서로의 가치를 잇다."</div>
+              <div class="motto-desc" data-lang="en">We build AIoT safety technology that protects workers and creates smarter, more human worksites.</div>
+              <div class="motto-desc" data-lang="ko">작업자를 지키고, 더 스마트하고 인간적인 현장을 만드는 AIoT 안전 기술 기업입니다.</div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center gap-2">
+              <a href="#products-section" class="btn-get-started">
+                <span data-lang="en">Our Products</span><span data-lang="ko">제품 보기</span>
               </a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center">
-                <i class="bi bi-play-circle"></i>
-                <span data-lang="en">Corporate Video</span><span data-lang="ko">브랜드 영상</span>
+              <a href="#vision-section" class="btn-hero-outline">
+                <i class="bi bi-eye"></i>
+                <span data-lang="en">Our Vision</span><span data-lang="ko">비전 보기</span>
               </a>
             </div>
+
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="Robaintech Corporate Vision">
+            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="ROBAINTECH AIoT Safety">
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ══ PARTNERS STRIP ══ -->
     <section id="clients" class="clients section light-background">
-      <div class="container" data-aos="zoom-in">
-        <div class="section-title" style="padding-bottom: 20px;">
-          <p style="font-size: 14px; color: #888;">OUR PARTNERS & COLLABORATORS</p>
-        </div>
+      <div class="container" data-aos="fade-up">
+        <p class="partners-eyebrow" data-lang="en">University Partners &amp; Collaborating Institutions</p>
+        <p class="partners-eyebrow" data-lang="ko">대학 파트너 &amp; 협력 기관</p>
         <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {"loop":true,"speed":600,"autoplay":{"delay":5000},"slidesPerView":"auto","pagination":{"el":".swiper-pagination","type":"bullets","clickable":true},"breakpoints":{"320":{"slidesPerView":2,"spaceBetween":40},"480":{"slidesPerView":3,"spaceBetween":60},"640":{"slidesPerView":4,"spaceBetween":80},"992":{"slidesPerView":5,"spaceBetween":120},"1200":{"slidesPerView":6,"spaceBetween":120}}}
-          </script>
+          <script type="application/json" class="swiper-config">{"loop":true,"speed":600,"autoplay":{"delay":4500},"slidesPerView":"auto","breakpoints":{"320":{"slidesPerView":2,"spaceBetween":40},"480":{"slidesPerView":3,"spaceBetween":60},"640":{"slidesPerView":4,"spaceBetween":80},"992":{"slidesPerView":5,"spaceBetween":120},"1200":{"slidesPerView":6,"spaceBetween":120}}}</script>
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/knu-logo.webp" class="img-fluid" alt="Kyungpook National University"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/kwu-logo.webp" class="img-fluid" alt="Kyungwoon University"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/du-logo.webp" class="img-fluid" alt="Daegu University"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/dhu-logo.webp" class="img-fluid" alt="Daegu Haany University"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-1.webp" class="img-fluid" alt="경북대학교"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-2.webp" class="img-fluid" alt="경운대학교"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-3.webp" class="img-fluid" alt="대구대학교"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-4.webp" class="img-fluid" alt="대구한의대학교"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-5.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-6.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-7.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-8.webp" class="img-fluid" alt=""></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-lang="en">Corporate Identity</h2>
-        <h2 data-lang="ko">기업 정체성</h2>
-      </div>
+    <!-- ══ VISION / MISSION / VALUES ══ -->
+    <section id="vision-section" class="section" style="padding:88px 0;">
       <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2 data-lang="en">Vision &amp; Mission</h2>
+          <h2 data-lang="ko">비전 &amp; 미션</h2>
+        </div>
+
+        <!-- 기업 모토 풀 강조 -->
+        <div data-aos="fade-up" data-aos-delay="80" style="margin-bottom:54px; text-align:center;">
+          <p class="motto-headline" data-lang="en">"Robot, AI and Human —<br>Connecting each other's value at the center."</p>
+          <p class="motto-headline" data-lang="ko">"Robot, AI 그리고 사람.<br>그 중심에서 서로의 가치를 잇다."</p>
+          <p class="motto-sub-text" data-lang="en">ROBAINTECH believes that true innovation happens when technology serves humanity.<br>We exist to protect workers, empower site managers, and build the future of safe industry.</p>
+          <p class="motto-sub-text" data-lang="ko">로바인텍은 기술이 사람을 위해 존재할 때 진정한 혁신이 이루어진다고 믿습니다.<br>우리는 작업자를 보호하고, 관리자에게 힘을 부여하며, 안전한 산업의 미래를 만들어갑니다.</p>
+        </div>
+
         <div class="row gy-4">
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <h3 style="color: #37517e; font-weight: 700;">Robot + AI + Human</h3>
-            <p data-lang="en">ROBAINTECH is redefining industrial safety through the convergence of robotics and artificial intelligence. We believe technology exists to protect and enhance human life.</p>
-            <p data-lang="ko">로바인텍은 로봇 공학과 인공지능의 융합을 통해 산업 안전의 개념을 재정의합니다. 우리는 기술이 인간의 생명을 보호하고 더 나은 삶을 위해 존재한다고 믿습니다.</p>
-            <ul>
-              <li><i class="bi bi-shield-check"></i> <span data-lang="en">Leading startup in AIoT industrial safety solutions</span><span data-lang="ko">AIoT 산업 안전 솔루션 선도 스타트업</span></li>
-              <li><i class="bi bi-cpu"></i> <span data-lang="en">Proprietary embedded & AI analysis technology</span><span data-lang="ko">자체 임베디드 및 AI 분석 기술 보유</span></li>
-              <li><i class="bi bi-people"></i> <span data-lang="en">Strong R&D network with regional innovation hubs</span><span data-lang="ko">지역 혁신 거점 대학과의 강력한 R&D 네트워크</span></li>
+
+          <!-- VISION -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="vmv-card v-vision h-100">
+              <div class="vmv-icon-wrap"><i class="bi bi-eye"></i></div>
+              <h4 data-lang="en">VISION</h4><h4 data-lang="ko">비전</h4>
+              <h3 data-lang="en">A world where no worker is injured — because technology is always protecting.</h3>
+              <h3 data-lang="ko">기술이 항상 지키고 있어서, 단 한 명의 작업자도 다치지 않는 세상.</h3>
+              <p data-lang="en">We are building toward becoming Asia's leading AIoT safety technology company — protecting every worker, on every site, every day. We envision smart worksites where robots, AI, and humans work in seamless and safe harmony.</p>
+              <p data-lang="ko">아시아를 대표하는 AIoT 안전 기술 기업을 목표로 합니다. 모든 현장의 모든 작업자를 매일 지키는 기술을 만듭니다. 로봇·AI·사람이 안전하게 조화를 이루는 스마트 현장을 만들어갑니다.</p>
+            </div>
+          </div>
+
+          <!-- MISSION -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="vmv-card v-mission h-100">
+              <div class="vmv-icon-wrap"><i class="bi bi-bullseye"></i></div>
+              <h4 data-lang="en">MISSION</h4><h4 data-lang="ko">미션</h4>
+              <h3 data-lang="en">Make industrial safety accessible, practical, and data-driven — for every worksite.</h3>
+              <h3 data-lang="ko">모든 현장이 쉽게 쓰고, 실용적이며, 데이터로 발전하는 산업 안전을 구현한다.</h3>
+              <p data-lang="en">We develop lightweight, affordable AIoT safety modules that integrate with existing infrastructure — making enterprise-grade safety accessible for all business sizes. Our mission is to turn raw field data into real accident prevention.</p>
+              <p data-lang="ko">기존 인프라에 즉시 연동되는 경량·실용적 AIoT 안전 모듈을 개발합니다. 규모에 관계없이 모든 사업장이 수준 높은 안전 관리를 누리도록 합니다. 현장의 원시 데이터를 실제 사고 예방으로 연결하는 것이 우리의 미션입니다.</p>
+            </div>
+          </div>
+
+          <!-- CORE VALUES -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="vmv-card v-values h-100">
+              <div class="vmv-icon-wrap"><i class="bi bi-gem"></i></div>
+              <h4 data-lang="en">CORE VALUES</h4><h4 data-lang="ko">핵심 가치</h4>
+              <h3 data-lang="en">The principles behind every decision we make.</h3>
+              <h3 data-lang="ko">모든 결정의 기준이 되는 원칙들.</h3>
+              <ul class="values-list">
+                <li>
+                  <i class="bi bi-people-fill"></i>
+                  <div><strong data-lang="en">Human First</strong><strong data-lang="ko">사람 중심</strong><span data-lang="en"> — Every product decision starts with the worker.</span><span data-lang="ko"> — 모든 제품 결정은 작업자에서 시작합니다.</span></div>
+                </li>
+                <li>
+                  <i class="bi bi-cpu-fill"></i>
+                  <div><strong data-lang="en">Field-Proven Tech</strong><strong data-lang="ko">현장 검증</strong><span data-lang="en"> — We only ship what works in real conditions.</span><span data-lang="ko"> — 실제 현장에서 검증된 기술만 출시합니다.</span></div>
+                </li>
+                <li>
+                  <i class="bi bi-arrow-repeat"></i>
+                  <div><strong data-lang="en">Continuous Learning</strong><strong data-lang="ko">지속 발전</strong><span data-lang="en"> — Field data drives every iteration.</span><span data-lang="ko"> — 현장 데이터가 모든 개선을 이끕니다.</span></div>
+                </li>
+                <li>
+                  <i class="bi bi-handshake-fill"></i>
+                  <div><strong data-lang="en">Partnership</strong><strong data-lang="ko">동반 성장</strong><span data-lang="en"> — We grow alongside clients and partners.</span><span data-lang="ko"> — 고객·파트너와 함께 성장합니다.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CAPABILITY ══ -->
+    <section id="capability-section" class="section" style="padding:88px 0;">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2 data-lang="en">Our Capability</h2>
+          <h2 data-lang="ko">수행 역량</h2>
+          <p data-lang="en">Field experience meets frontier technology — engineering, manufacturing, and safety expertise in one team.</p>
+          <p data-lang="ko">현장 경험과 첨단 기술의 만남 — 엔지니어링·제조·안전 전문성을 하나의 팀에서.</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stat-row" data-aos="fade-up" data-aos-delay="80">
+          <div class="row justify-content-center align-items-center gy-3">
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <span class="num">4<span class="unit">+</span></span>
+                <span class="lbl" data-lang="en">University R&amp;D Partners</span>
+                <span class="lbl" data-lang="ko">대학 R&amp;D 파트너</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <span class="num">6<span class="unit">-Axis</span></span>
+                <span class="lbl" data-lang="en">IMU Fall Detection</span>
+                <span class="lbl" data-lang="ko">IMU 낙하 감지</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <span class="num">3<span class="unit">-in-1</span></span>
+                <span class="lbl" data-lang="en">Safety Functions Per Module</span>
+                <span class="lbl" data-lang="ko">모듈당 복합 안전 기능</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <span class="num" style="font-size:1.55rem;">Zero</span>
+                <span class="lbl" data-lang="en">Extra Comm Infrastructure</span>
+                <span class="lbl" data-lang="ko">추가 통신 인프라 비용</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail -->
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/illustration/illustration-10.webp" class="img-fluid" alt="ROBAINTECH 기술 역량" style="border-radius:18px;">
+          </div>
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+            <ul class="cap-list">
+              <li>
+                <div class="cap-icon c1"><i class="bi bi-cpu"></i></div>
+                <div>
+                  <h5 data-lang="en">AIoT Embedded System Development</h5>
+                  <h5 data-lang="ko">AIoT 임베디드 시스템 개발</h5>
+                  <p data-lang="en">In-house hardware and firmware for ultra-lightweight wearable safety modules. 6-axis IMU, multi-sensor fusion, BLE — tuned for harsh construction environments.</p>
+                  <p data-lang="ko">초경량 웨어러블 안전 모듈을 위한 자체 하드웨어·펌웨어 개발. 6축 IMU, 다중 센서 융합, BLE 통신 — 열악한 현장 환경에 최적화.</p>
+                </div>
+              </li>
+              <li>
+                <div class="cap-icon c2"><i class="bi bi-graph-up-arrow"></i></div>
+                <div>
+                  <h5 data-lang="en">Real-time IoT Monitoring Platform</h5>
+                  <h5 data-lang="ko">실시간 IoT 관제 플랫폼</h5>
+                  <p data-lang="en">Smartphone-as-gateway eliminates dedicated network costs. Full site visibility on one dashboard, deployable in a single day.</p>
+                  <p data-lang="ko">스마트폰 게이트웨이 방식으로 전용 통신 인프라 비용 제로화. 하루 만에 구축 가능한 현장 전체 통합 관제 대시보드.</p>
+                </div>
+              </li>
+              <li>
+                <div class="cap-icon c3"><i class="bi bi-shield-shaded"></i></div>
+                <div>
+                  <h5 data-lang="en">Industrial Safety Domain Expertise</h5>
+                  <h5 data-lang="ko">산업 안전 도메인 전문성</h5>
+                  <p data-lang="en">Deep experience distributing and manufacturing industrial safety products. We know what sites actually need — and build exactly that.</p>
+                  <p data-lang="ko">산업안전 제품 유통·제조 분야의 깊은 실무 경험. 현장이 실제로 필요한 것을 정확히 알고, 꼭 필요한 것만 만듭니다.</p>
+                </div>
+              </li>
+              <li>
+                <div class="cap-icon c4"><i class="bi bi-mortarboard"></i></div>
+                <div>
+                  <h5 data-lang="en">4-University R&amp;D Partnership Network</h5>
+                  <h5 data-lang="ko">4개 대학 가족기업 R&amp;D 파트너십</h5>
+                  <p data-lang="en">Official family-enterprise R&amp;D agreements with Kyungpook National, Kyungwoon, Daegu, and Daegu Haany Universities — continuous research, hardware validation, and talent pipeline.</p>
+                  <p data-lang="ko">경북대·경운대·대구대·대구한의대 4개 대학과 공식 가족기업 파트너십 체결. 지속적인 연구, 하드웨어 검증, 인재 연계 파이프라인 확보.</p>
+                </div>
+              </li>
+              <li>
+                <div class="cap-icon c5"><i class="bi bi-robot"></i></div>
+                <div>
+                  <h5 data-lang="en">AI-driven Predictive Safety Analytics</h5>
+                  <h5 data-lang="ko">AI 기반 예측형 안전 분석</h5>
+                  <p data-lang="en">Integrating machine learning with multi-sensor data to turn raw field signals into predictive accident prevention intelligence.</p>
+                  <p data-lang="ko">머신러닝과 다중 센서 데이터 융합으로 원시 현장 신호를 사전 사고 예방 인텔리전스로 전환합니다.</p>
+                </div>
+              </li>
             </ul>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p data-lang="en">Our journey began with a mission to eliminate blind spots in industrial safety. By integrating smart sensors with real-time AI analysis, we provide a "Safe-Link" between technology and people. We don't just build devices; we build a sustainable safety culture for the future workforce.</p>
-            <p data-lang="ko">로바인텍의 여정은 산업 현장의 안전 사각지대를 없애는 미션에서 시작되었습니다. 스마트 센서와 실시간 AI 분석을 통합하여 사람과 기술 사이의 '안전한 연결(Safe-Link)'을 제공합니다. 우리는 단순한 장비를 넘어 미래 세대를 위한 지속 가능한 안전 문화를 만들어갑니다.</p>
-            <a href="#contact" class="read-more">
-              <span data-lang="en">Inquire for Partnership</span><span data-lang="ko">파트너십 문의하기</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="skills section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-lg-6 d-flex align-items-center">
-            <img src="assets/img/illustration/illustration-10.webp" class="img-fluid" alt="Technology Capability">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content">
-            <h3 data-lang="en">Core Technical Capabilities</h3>
-            <h3 data-lang="ko">핵심 기술 역량</h3>
-            <p class="fst-italic" data-lang="en">Our technology stack spans from hardware sensor integration to high-level AI cloud platforms.</p>
-            <p class="fst-italic" data-lang="ko">로바인텍의 기술 스택은 하드웨어 센서 통합부터 고도의 AI 클라우드 플랫폼까지 전 영역을 아우릅니다.</p>
-            <div class="skills-content skills-animation">
-              <div class="progress">
-                <span class="skill"><span data-lang="en">AIoT Sensor Integration</span><span data-lang="ko">AIoT 센서 통합 기술</span> <i class="val">95%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-              <div class="progress">
-                <span class="skill"><span data-lang="en">Real-time Monitoring Platform</span><span data-lang="ko">실시간 관제 플랫폼 개발</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
-              <div class="progress">
-                <span class="skill"><span data-lang="en">Embedded System Design</span><span data-lang="ko">임베디드 시스템 설계</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
-              </div>
+            <div class="tech-pills">
+              <span class="tech-pill"><i class="bi bi-broadcast"></i> BLE / IoT</span>
+              <span class="tech-pill"><i class="bi bi-thermometer-half"></i><span data-lang="en">Multi-Sensor</span><span data-lang="ko">복합 센서</span></span>
+              <span class="tech-pill"><i class="bi bi-phone"></i><span data-lang="en">Mobile Gateway</span><span data-lang="ko">스마트폰 GW</span></span>
+              <span class="tech-pill"><i class="bi bi-cloud-check"></i><span data-lang="en">Cloud Platform</span><span data-lang="ko">클라우드 관제</span></span>
+              <span class="tech-pill"><i class="bi bi-robot"></i> AI / ML</span>
+              <span class="tech-pill"><i class="bi bi-activity"></i><span data-lang="en">Real-time Alerts</span><span data-lang="ko">실시간 알림</span></span>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <section id="services" class="services section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-lang="en">Business Areas</h2>
-        <h2 data-lang="ko">사업 영역</h2>
-        <p data-lang="en">Providing total solutions for industrial digital transformation</p>
-        <p data-lang="ko">산업 디지털 전환을 위한 토털 솔루션 제공</p>
-      </div>
+    <!-- ══ PRODUCTS LINE-UP ══ -->
+    <section id="products-section" class="section" style="padding:88px 0;">
       <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2 data-lang="en">Product Line-up</h2>
+          <h2 data-lang="ko">제품 라인업</h2>
+          <p data-lang="en">Smart safety solutions engineered for real worksites — with more products always in development.</p>
+          <p data-lang="ko">실제 현장을 위한 스마트 안전 솔루션 — 새로운 제품이 계속 추가됩니다.</p>
+        </div>
+
         <div class="row gy-4">
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-robot icon"></i></div>
-              <h4 data-lang="en">AIoT Device Development</h4>
-              <h4 data-lang="ko">AIoT 디바이스 개발</h4>
-              <p data-lang="en">Developing specialized smart safety hardware tailored for hazardous environments.</p>
-              <p data-lang="ko">고위험 현장에 특화된 맞춤형 스마트 안전 하드웨어를 개발합니다.</p>
+
+          <!-- Safe-Link -->
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card">
+              <div class="pcard-header th-safe">
+                <div class="pcard-icon"><i class="bi bi-shield-check"></i></div>
+                <h3>Safe-Link</h3>
+                <p class="pcard-sub" data-lang="en">Worker Safety AIoT Module</p>
+                <p class="pcard-sub" data-lang="ko">작업자 안전 AIoT 웨어러블 모듈</p>
+                <div class="pcard-status st-live">
+                  <span data-lang="en">Active Development · PoC</span>
+                  <span data-lang="ko">개발 진행중 · PoC 단계</span>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <p class="pcard-desc" data-lang="en">A lightweight detachable AIoT module that clips onto any standard hard hat. Combines fall detection, heat stroke prevention, and gas sensing in one unit — transmitting real-time safety data to a central monitoring platform via the worker's smartphone.</p>
+                <p class="pcard-desc" data-lang="ko">모든 표준 안전모에 탈부착 가능한 경량 AIoT 모듈. 낙하 감지·열사병 예방·가스 감지를 하나의 유닛에 통합하여, 작업자의 스마트폰을 통해 실시간 안전 데이터를 중앙 관제 플랫폼으로 전송합니다.</p>
+                <ul class="pcard-feats">
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>6-axis IMU fall &amp; posture detection</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Environmental sensor: heat stroke prevention</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Gas leak detection module (optional)</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>BLE → Smartphone gateway (zero infra cost)</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Real-time cloud monitoring dashboard</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Serious Accident Act compliance log auto-generated</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>6축 IMU 낙하·자세 감지</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>환경 센서: 열사병 예방 모니터링</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>가스 누출 감지 모듈 (옵션)</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>BLE → 스마트폰 게이트웨이 (통신비 제로)</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>실시간 클라우드 관제 대시보드</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>중대재해처벌법 의무 이행 기록 자동 생성</li>
+                </ul>
+                <div class="pcard-tags">
+                  <span class="ptag ptag-blue" data-lang="en">Construction</span>
+                  <span class="ptag ptag-blue" data-lang="en">Gas Plant</span>
+                  <span class="ptag ptag-blue" data-lang="en">Heavy Industry</span>
+                  <span class="ptag ptag-blue" data-lang="ko">건설 현장</span>
+                  <span class="ptag ptag-blue" data-lang="ko">가스 플랜트</span>
+                  <span class="ptag ptag-blue" data-lang="ko">중공업</span>
+                </div>
+              </div>
+              <div class="pcard-footer">
+                <a href="#contact" class="pcard-link">
+                  <span data-lang="en">Inquire about Safe-Link</span><span data-lang="ko">Safe-Link 문의하기</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-cloud-check icon"></i></div>
-              <h4 data-lang="en">Safety SaaS Platform</h4>
-              <h4 data-lang="ko">안전 SaaS 플랫폼</h4>
-              <p data-lang="en">Cloud-based monitoring solutions for real-time risk management and data analysis.</p>
-              <p data-lang="ko">실시간 위험 관리와 데이터 분석을 위한 클라우드 기반 관제 솔루션을 제공합니다.</p>
+
+          <!-- CraneGuard -->
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card">
+              <div class="pcard-header th-crane">
+                <div class="pcard-icon"><i class="bi bi-truck-flatbed"></i></div>
+                <h3>CraneGuard</h3>
+                <p class="pcard-sub" data-lang="en">Heavy Equipment Overturn Prevention Module</p>
+                <p class="pcard-sub" data-lang="ko">중장비 전도 예방 안전 모듈</p>
+                <div class="pcard-status st-dev">
+                  <span data-lang="en">In Development</span>
+                  <span data-lang="ko">개발 예정</span>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <p class="pcard-desc" data-lang="en">Next-generation safety module for cranes and heavy equipment. Integrates overload, tilt, ground subsidence, and wind sensors — detecting critical risk before catastrophic failures occur. Unified with the Safe-Link monitoring platform.</p>
+                <p class="pcard-desc" data-lang="ko">크레인·중장비를 위한 차세대 안전 모듈. 과부하·기울기·지반침하·풍속 센서를 통합하여 치명적인 전도 사고 발생 전에 위험을 감지합니다. Safe-Link 관제 플랫폼과 통합 운영됩니다.</p>
+                <ul class="pcard-feats">
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Overload &amp; tilt real-time sensing</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Ground subsidence detection</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Wind speed monitoring</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Integrated with Safe-Link cloud platform</li>
+                  <li data-lang="en"><i class="bi bi-check-circle-fill"></i>Worker + equipment unified safety monitoring</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>과부하·기울기 실시간 감지</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>지반 침하 감지</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>풍속 모니터링</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>Safe-Link 클라우드 플랫폼 통합</li>
+                  <li data-lang="ko"><i class="bi bi-check-circle-fill"></i>작업자 + 장비 통합 안전 관제</li>
+                </ul>
+                <div class="pcard-tags">
+                  <span class="ptag ptag-green" data-lang="en">Crane</span>
+                  <span class="ptag ptag-green" data-lang="en">Excavator</span>
+                  <span class="ptag ptag-green" data-lang="en">Construction Site</span>
+                  <span class="ptag ptag-green" data-lang="ko">크레인</span>
+                  <span class="ptag ptag-green" data-lang="ko">굴착기</span>
+                  <span class="ptag ptag-green" data-lang="ko">건설 현장</span>
+                </div>
+              </div>
+              <div class="pcard-footer">
+                <a href="#contact" class="pcard-link muted">
+                  <span data-lang="en">Register interest</span><span data-lang="ko">사전 문의하기</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-cpu icon"></i></div>
-              <h4 data-lang="en">Industrial AI Analysis</h4>
-              <h4 data-lang="ko">산업용 AI 분석</h4>
-              <p data-lang="en">Predictive AI models that identify potential hazards before accidents occur.</p>
-              <p data-lang="ko">사고 발생 전 잠재적 위험 요소를 식별하는 예측 AI 모델을 구축합니다.</p>
+
+          <!-- Coming Next -->
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-card ph-card">
+              <div class="pcard-header th-next">
+                <div class="pcard-icon" style="background:rgba(255,255,255,0.18);"><i class="bi bi-plus-circle"></i></div>
+                <h3 data-lang="en">Next Product</h3>
+                <h3 data-lang="ko">차기 제품</h3>
+                <p class="pcard-sub" data-lang="en">More AIoT safety solutions on the roadmap</p>
+                <p class="pcard-sub" data-lang="ko">더 많은 AIoT 안전 솔루션이 로드맵에 있습니다</p>
+                <div class="pcard-status st-soon">
+                  <span data-lang="en">Coming Soon</span><span data-lang="ko">준비 중</span>
+                </div>
+              </div>
+              <div class="ph-body">
+                <i class="bi bi-lightbulb"></i>
+                <p data-lang="en">ROBAINTECH is continuously expanding its safety product portfolio.<br><br>New solutions for emerging worksite challenges — from wearables to fixed installations — are always in development.<br><br>Have a specific safety problem? We'd love to collaborate.</p>
+                <p data-lang="ko">로바인텍은 안전 제품 포트폴리오를 지속적으로 확장합니다.<br><br>웨어러블부터 고정형 설치까지, 새로운 현장 안전 과제를 위한 솔루션이 항상 개발 중입니다.<br><br>해결하고 싶은 안전 문제가 있으신가요?</p>
+              </div>
+              <div class="pcard-footer">
+                <a href="#contact" class="pcard-link muted">
+                  <span data-lang="en">Share your challenge</span><span data-lang="ko">안전 과제 공유하기</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-gear icon"></i></div>
-              <h4 data-lang="en">Robot Integration</h4>
-              <h4 data-lang="ko">로봇 통합 솔루션</h4>
-              <p data-lang="en">Merging robotic systems with AI for automated safety patrolling and task execution.</p>
-              <p data-lang="ko">로봇 시스템과 AI를 결합하여 자동화된 안전 순찰 및 작업 수행을 지원합니다.</p>
+
+        </div><!-- /row -->
+      </div>
+    </section>
+
+    <!-- ══ LAW CTA BANNER ══ -->
+    <div class="law-cta-wrap">
+      <div class="container" data-aos="fade-up">
+        <div class="law-cta-inner">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+              <div class="law-badge" data-lang="en"><i class="bi bi-shield-exclamation"></i> Serious Accident Punishment Act</div>
+              <div class="law-badge" data-lang="ko"><i class="bi bi-shield-exclamation"></i> 중대재해처벌법</div>
+              <h3 data-lang="en">Is your worksite legally protected?<br>Safe-Link creates the evidence you need — automatically.</h3>
+              <h3 data-lang="ko">귀사 현장의 안전 의무 이행, 준비되어 있나요?<br>Safe-Link가 필요한 이행 증거를 자동으로 만들어 드립니다.</h3>
+              <p data-lang="en" style="margin-top:12px;">Korea's Serious Accident Punishment Act requires documented safety monitoring. Safe-Link auto-generates timestamped incident logs, alert records, and monitoring histories — giving inspectors exactly what they need to see.</p>
+              <p data-lang="ko" style="margin-top:12px;">중대재해처벌법은 안전 모니터링에 대한 문서화된 기록을 요구합니다. Safe-Link는 타임스탬프가 찍힌 사고 로그, 알림 기록, 모니터링 이력을 자동 생성 — 현장 점검 시 필요한 모든 증거 자료를 제공합니다.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end text-center" style="position:relative;z-index:1;">
+              <a href="#contact" class="btn-cta-light">
+                <i class="bi bi-chat-dots-fill"></i>
+                <span data-lang="en">Free Consultation</span>
+                <span data-lang="ko">무료 상담 받기</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PROCESS ══ -->
+    <section id="process-section" class="section" style="padding:88px 0;">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2 data-lang="en">How We Work</h2>
+          <h2 data-lang="ko">개발 프로세스</h2>
+          <p data-lang="en">From field problem to deployed solution — fast, reliable, and data-driven at every step.</p>
+          <p data-lang="ko">현장 문제 발견에서 배포까지 — 빠르고, 신뢰할 수 있으며, 모든 단계가 데이터 기반.</p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+            <div class="process-card">
+              <div class="proc-num">01</div>
+              <div>
+                <h5 data-lang="en">Field Discovery</h5><h5 data-lang="ko">현장 발굴</h5>
+                <p data-lang="en">We start by immersing ourselves in real worksites — observation, interviews, and risk mapping to uncover pain points data alone can't show.</p>
+                <p data-lang="ko">실제 현장에 직접 들어가는 것에서 시작합니다. 관찰·인터뷰·위험 요인 매핑으로 데이터만으로는 보이지 않는 문제를 발굴합니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="140">
+            <div class="process-card">
+              <div class="proc-num">02</div>
+              <div>
+                <h5 data-lang="en">Rapid Prototyping</h5><h5 data-lang="ko">신속 프로토타이핑</h5>
+                <p data-lang="en">University R&amp;D partnerships accelerate hardware development. We prototype and iterate quickly — compressing time from concept to working device.</p>
+                <p data-lang="ko">대학 R&amp;D 파트너십으로 하드웨어 개발을 가속화합니다. 빠른 프로토타입·반복으로 개념에서 실제 디바이스까지의 시간을 단축합니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-card">
+              <div class="proc-num">03</div>
+              <div>
+                <h5 data-lang="en">PoC Field Trials</h5><h5 data-lang="ko">PoC 현장 실증</h5>
+                <p data-lang="en">Every product is validated through rigorous proof-of-concept trials at real partner sites. No lab-only testing — ever.</p>
+                <p data-lang="ko">모든 제품은 실제 파트너 현장에서 엄격한 PoC 실증을 거칩니다. 실험실 단독 테스트에는 의존하지 않습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="260">
+            <div class="process-card">
+              <div class="proc-num">04</div>
+              <div>
+                <h5 data-lang="en">Platform Integration</h5><h5 data-lang="ko">플랫폼 통합</h5>
+                <p data-lang="en">Each hardware module integrates with the ROBAINTECH monitoring platform — unified visibility across all devices and sites in one view.</p>
+                <p data-lang="ko">모든 하드웨어 모듈을 로바인텍 관제 플랫폼과 통합합니다. 모든 디바이스와 현장을 하나의 화면에서 통합 관제.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="320">
+            <div class="process-card">
+              <div class="proc-num">05</div>
+              <div>
+                <h5 data-lang="en">Deployment &amp; Training</h5><h5 data-lang="ko">배포 및 교육</h5>
+                <p data-lang="en">Full site deployment and on-site worker training included. Module attached in minutes — no technical knowledge required.</p>
+                <p data-lang="ko">현장 배포와 작업자 교육을 직접 지원합니다. 모듈은 몇 분 만에 장착 — 기술 지식 불필요.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="380">
+            <div class="process-card">
+              <div class="proc-num">06</div>
+              <div>
+                <h5 data-lang="en">Data-driven Iteration</h5><h5 data-lang="ko">데이터 기반 개선</h5>
+                <p data-lang="en">Field data from every deployed module feeds back into product development — each version is always smarter and safer.</p>
+                <p data-lang="ko">배포된 모든 모듈의 현장 데이터가 지속적으로 제품 개발에 반영됩니다. 다음 버전은 항상 더 스마트하고 더 안전합니다.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-lang="en">Contact</h2>
-        <h2 data-lang="ko">문의하기</h2>
-        <p data-lang="en">Get in touch to build a safer future together</p>
-        <p data-lang="ko">더 안전한 미래를 함께 만들기 위해 로바인텍에 연락해 주세요</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-5">
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3 data-lang="en">Address</h3><h3 data-lang="ko">주소</h3>
-                  <p data-lang="ko">경상북도 경산시</p>
+    <!-- ══ FAQ ══ -->
+    <section id="faq-section" class="faq-2 section light-background" style="padding:88px 0;">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2 data-lang="en">Frequently Asked Questions</h2>
+          <h2 data-lang="ko">자주 묻는 질문</h2>
+          <p data-lang="en">Everything you need to know about ROBAINTECH and Safe-Link.</p>
+          <p data-lang="ko">로바인텍과 Safe-Link에 대해 자주 묻는 질문들을 모았습니다.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="100">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3 data-lang="en">What is Safe-Link and how is it different from existing safety gear?</h3>
+                <h3 data-lang="ko">Safe-Link란 무엇이며, 기존 안전 장비와 어떻게 다른가요?</h3>
+                <div class="faq-content">
+                  <p data-lang="en">Safe-Link is a clip-on AIoT module for any standard hard hat. Unlike dedicated wearables requiring new helmets or complex networks, Safe-Link uses a worker's smartphone as the data gateway — eliminating infrastructure costs. It combines 3 safety functions: fall detection (6-axis IMU), heat stroke prevention, and gas leak detection.</p>
+                  <p data-lang="ko">Safe-Link는 모든 표준 안전모에 클립 방식으로 장착하는 AIoT 모듈입니다. 새 안전모나 복잡한 네트워크가 필요한 기존 전용 웨어러블과 달리, 작업자의 스마트폰을 데이터 게이트웨이로 활용해 인프라 비용을 없앱니다. 낙하 감지(6축 IMU)·열사병 예방·가스 누출 감지 3가지 기능을 하나에 통합합니다.</p>
                 </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3 data-lang="en">Call Us</h3><h3 data-lang="ko">전화 문의</h3>
-                  <p>+82 10-0000-0000</p>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3 data-lang="en">How does Safe-Link help with Serious Accident Punishment Act compliance?</h3>
+                <h3 data-lang="ko">Safe-Link가 중대재해처벌법 의무 이행에 어떻게 도움이 되나요?</h3>
+                <div class="faq-content">
+                  <p data-lang="en">The Act requires documented safety monitoring. Safe-Link automatically generates timestamped logs of all safety events, alert dispatches, and system checks — producing the evidence trail inspectors need. In an incident, these records show active monitoring was in place.</p>
+                  <p data-lang="ko">중대재해처벌법은 안전 모니터링 활동의 문서화를 요구합니다. Safe-Link는 모든 안전 이벤트, 알림 발송, 시스템 점검을 타임스탬프와 함께 자동 기록하여 점검관에게 필요한 의무 이행 증거를 생성합니다. 사고 발생 시 적극적인 안전 모니터링이 이루어졌음을 증명합니다.</p>
                 </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3 data-lang="en">Email Us</h3><h3 data-lang="ko">이메일 문의</h3>
-                  <p>info@robaintech.com</p>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3 data-lang="en">Does Safe-Link require additional network infrastructure?</h3>
+                <h3 data-lang="ko">Safe-Link 운영에 추가 통신 인프라가 필요한가요?</h3>
+                <div class="faq-content">
+                  <p data-lang="en">No. Safe-Link connects via BLE to a standard smartphone acting as the gateway. No dedicated IoT networks, repeaters, or infrastructure investment needed — practical even for small worksites with limited budgets.</p>
+                  <p data-lang="ko">필요 없습니다. Safe-Link는 BLE로 일반 스마트폰에 연결하여 게이트웨이로 활용합니다. 전용 IoT 네트워크, 중계기, 인프라 투자가 불필요합니다. 예산이 제한된 중소 규모 현장에서도 즉시 실용적으로 배포 가능합니다.</p>
                 </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25711.5!2d128.7384!3d35.8196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e9b6b3f6c6c1%3A0x8c7f5a2c8c1a1a1a!2sGyeongsan-si!5e0!3m2!1sko!2skr!4v1710000000000" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3 data-lang="en">What is ROBAINTECH's quality assurance process?</h3>
+                <h3 data-lang="ko">로바인텍의 품질 보증 및 R&amp;D 프로세스는 어떻게 되나요?</h3>
+                <div class="faq-content">
+                  <p data-lang="en">Every product undergoes field-based PoC trials at real partner sites before commercial deployment. Official family-enterprise R&amp;D agreements with 4 universities — Kyungpook National, Kyungwoon, Daegu, and Daegu Haany — provide hardware validation, performance testing, and continuous research support.</p>
+                  <p data-lang="ko">모든 제품은 상용화 배포 전에 실제 파트너 현장에서 현장 기반 PoC 실증을 거칩니다. 경북대·경운대·대구대·대구한의대 4개 대학과 공식 가족기업 R&amp;D 파트너십을 유지하며 하드웨어 검증·성능 테스트·연속 연구 지원을 받고 있습니다.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3 data-lang="en">How quickly can Safe-Link be deployed at a new worksite?</h3>
+                <h3 data-lang="ko">새 현장에 Safe-Link를 배포하는 데 얼마나 걸리나요?</h3>
+                <div class="faq-content">
+                  <p data-lang="en">Module attachment takes minutes per helmet. The monitoring platform is configured and running within one day. We provide on-site deployment support and worker training — no technical background required for daily operation.</p>
+                  <p data-lang="ko">모듈 장착은 안전모당 수 분 내에 완료됩니다. 관제 플랫폼은 하루 안에 구성하고 운영을 시작할 수 있습니다. 현장 배포 지원과 작업자 교육을 직접 제공하며, 일상 운영에 기술적 배경 지식이 필요 없습니다.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
             </div>
           </div>
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2" data-lang="ko">이름</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CONTACT ══ -->
+    <section id="contact" class="contact section" style="padding:88px 0;">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2 data-lang="en">Contact Us</h2>
+          <h2 data-lang="ko">문의하기</h2>
+          <p data-lang="en">Product enquiries, partnership proposals, site deployment consultation — we're here.</p>
+          <p data-lang="ko">제품 문의, 파트너십 제안, 현장 도입 상담 — 언제든지 연락 주세요.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <div class="info-wrap">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3 data-lang="en">Address</h3><h3 data-lang="ko">주소</h3>
+                    <p data-lang="en">Gyeongsan-si, Gyeongsangbuk-do, Republic of Korea</p>
+                    <p data-lang="ko">경상북도 경산시 (대구 이전 예정)</p>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2" data-lang="ko">이메일</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3 data-lang="en">Call Us</h3><h3 data-lang="ko">전화 문의</h3>
+                    <p>+82 10-0000-0000</p>
+                  </div>
                 </div>
-                <div class="col-md-12 text-center">
-                  <button type="submit">
-                    <span data-lang="en">Send Message</span><span data-lang="ko">메시지 보내기</span>
-                  </button>
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3 data-lang="en">Email Us</h3><h3 data-lang="ko">이메일 문의</h3>
+                    <p>info@robaintech.com</p>
+                  </div>
                 </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25711.5!2d128.7384!3d35.8196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e9b6b3f6c6c1%3A0x8c7f5a2c8c1a1a1a!2sGyeongsan-si!5e0!3m2!1sko!2skr!4v1710000000000"
+                  frameborder="0" style="border:0;width:100%;height:270px;border-radius:12px;margin-top:12px;"
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
-            </form>
+            </div>
+            <div class="col-lg-7">
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <label for="name-field" class="pb-2" data-lang="en">Your Name</label>
+                    <label for="name-field" class="pb-2" data-lang="ko">이름</label>
+                    <input type="text" name="name" id="name-field" class="form-control" required="">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email-field" class="pb-2" data-lang="en">Your Email</label>
+                    <label for="email-field" class="pb-2" data-lang="ko">이메일</label>
+                    <input type="email" class="form-control" name="email" id="email-field" required="">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="subject-field" class="pb-2" data-lang="en">Subject</label>
+                    <label for="subject-field" class="pb-2" data-lang="ko">제목</label>
+                    <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="message-field" class="pb-2" data-lang="en">Message</label>
+                    <label for="message-field" class="pb-2" data-lang="ko">내용</label>
+                    <textarea class="form-control" name="message" rows="9" id="message-field" required=""></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message" data-lang="en">Your message has been sent. Thank you!</div>
+                    <div class="sent-message" data-lang="ko">메시지가 전송되었습니다. 감사합니다!</div>
+                    <button type="submit"><span data-lang="en">Send Message</span><span data-lang="ko">메시지 보내기</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -278,40 +835,70 @@
 
   </main>
 
+  <!-- ══ FOOTER ══ -->
   <footer id="footer" class="footer">
     <div class="container footer-top">
       <div class="row gy-4">
+
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
             <span class="sitename">ROBAINTECH</span>
           </a>
-          <div class="footer-contact pt-3">
-            <p data-lang="ko">경상북도 경산시, 대한민국</p>
-            <p class="mt-3"><strong data-lang="ko">전화:</strong> <span>+82 10-0000-0000</span></p>
-            <p><strong data-lang="ko">이메일:</strong> <span>info@robaintech.com</span></p>
+          <p style="margin-top:12px;font-size:0.87rem;color:#8aaccf;line-height:1.7;font-style:italic;" data-lang="en">"Robot, AI and Human —<br>Connecting each other's value at the center."</p>
+          <p style="margin-top:12px;font-size:0.87rem;color:#8aaccf;line-height:1.7;" data-lang="ko">"Robot, AI 그리고 사람.<br>그 중심에서 서로의 가치를 잇다."</p>
+          <div class="footer-contact pt-2">
+            <p data-lang="en">Gyeongsan-si, Gyeongsangbuk-do, Korea</p>
+            <p data-lang="ko">경상북도 경산시 (대구 이전 예정)</p>
+            <p class="mt-2"><strong data-lang="en">Email: </strong><strong data-lang="ko">이메일: </strong><span>info@robaintech.com</span></p>
           </div>
         </div>
+
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4 data-lang="ko">바로가기</h4>
+          <h4 data-lang="en">Quick Links</h4><h4 data-lang="ko">바로가기</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i><a href="#hero"><span data-lang="ko">홈</span></a></li>
-            <li><i class="bi bi-chevron-right"></i><a href="#about"><span data-lang="ko">회사 소개</span></a></li>
-            <li><i class="bi bi-chevron-right"></i><a href="#services"><span data-lang="ko">사업 영역</span></a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="#hero"><span data-lang="en">Home</span><span data-lang="ko">홈</span></a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="#vision-section"><span data-lang="en">Vision</span><span data-lang="ko">비전</span></a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="#capability-section"><span data-lang="en">Capability</span><span data-lang="ko">역량</span></a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="#products-section"><span data-lang="en">Products</span><span data-lang="ko">제품</span></a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="#contact"><span data-lang="en">Contact</span><span data-lang="ko">문의</span></a></li>
           </ul>
         </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 data-lang="en">Products</h4><h4 data-lang="ko">제품</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i><a href="#products-section">Safe-Link</a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="#products-section">CraneGuard</a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="#products-section"><span data-lang="en">More coming…</span><span data-lang="ko">추가 예정…</span></a></li>
+          </ul>
+        </div>
+
         <div class="col-lg-4 col-md-12">
-          <h4 data-lang="ko">팔로우하기</h4>
-          <p data-lang="ko">로바인텍의 최신 기술 소식을 확인하세요.</p>
+          <h4 data-lang="en">Follow Us</h4><h4 data-lang="ko">팔로우하기</h4>
+          <p data-lang="en">Stay connected for the latest AIoT safety technology updates from ROBAINTECH.</p>
+          <p data-lang="ko">로바인텍의 최신 AIoT 안전 기술 소식을 팔로우하세요.</p>
           <div class="social-links d-flex">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
+          <div style="margin-top:18px;padding:13px 15px;background:#0d2340;border-radius:10px;font-size:0.81rem;color:#8aaccf;line-height:1.65;">
+            <i class="bi bi-mortarboard" style="color:#47b2e4;margin-right:6px;"></i>
+            <strong style="color:#a0c4e0;" data-lang="en">University Partners:</strong>
+            <strong style="color:#a0c4e0;" data-lang="ko">대학 파트너:</strong><br>
+            경북대학교 · 경운대학교 · 대구대학교 · 대구한의대학교
+          </div>
         </div>
+
       </div>
     </div>
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">ROBAINTECH</strong> <span data-lang="ko">모든 권리 보유</span></p>
+      <p>© 2026 <strong class="px-1 sitename">ROBAINTECH</strong> <span data-lang="en">All Rights Reserved</span><span data-lang="ko">All Rights Reserved</span></p>
+      <div class="credits">
+        <span data-lang="en">주식회사 로바인텍 · Gyeongsan-si, Gyeongsangbuk-do, Republic of Korea</span>
+        <span data-lang="ko">주식회사 로바인텍 · 경상북도 경산시, 대한민국</span>
+      </div>
     </div>
   </footer>
 
@@ -319,9 +906,13 @@
   <div id="preloader"></div>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
 
   <script>
@@ -329,11 +920,19 @@
       document.getElementById('html-root').setAttribute('lang', lang);
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
-      document.title = lang === 'ko' ? '로바인텍 - 로봇 AI 인간' : 'ROBAINTECH - ROBOT AI HUMAN';
+      document.title = lang === 'ko'
+        ? '로바인텍 — Robot, AI 그리고 사람. 그 중심에서 서로의 가치를 잇다.'
+        : 'ROBAINTECH — Robot, AI and Human. Connecting Values at the Center.';
+      try { localStorage.setItem('robaintech-lang', lang); } catch(e) {}
     }
-    (function() {
-      const bl = (navigator.language || 'ko').toLowerCase();
-      if (bl.startsWith('ko')) setLang('ko');
+    (function () {
+      let saved = null;
+      try { saved = localStorage.getItem('robaintech-lang'); } catch(e) {}
+      if (!saved) {
+        const bl = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (bl.startsWith('ko')) saved = 'ko';
+      }
+      if (saved === 'ko') setLang('ko');
     })();
   </script>
 
