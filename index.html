@@ -32,9 +32,8 @@
     .scrolled .lang-btn.active, .scrolled .lang-btn:hover { background:#47b2e4; border-color:#47b2e4; color:#fff; }
 
     /* ═══════════════════════════════ LANGUAGE VISIBILITY ═══════════════════════════════ */
-    [data-lang] { display:none !important; }
-    html[lang="en"] [data-lang="en"] { display:revert !important; }
-    html[lang="ko"] [data-lang="ko"] { display:revert !important; }
+    /* JS setLang() 이 .lang-hide 클래스를 토글하여 제어 */
+    .lang-hide { display:none !important; }
     html[lang="ko"] body { font-family:'Noto Sans KR','Open Sans',sans-serif; }
 
     /* ═══════════════════════════════ HERO ENHANCEMENTS ═══════════════════════════════ */
@@ -173,7 +172,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="sitename"><img src="assets/img/robain_logo.png"></h1>
+        <h1 class="sitename">ROBAINTECH</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -929,6 +928,14 @@
 
   <script>
     function setLang(lang) {
+      var other = lang === 'en' ? 'ko' : 'en';
+      // 보여줄 언어: lang-hide 제거, 숨길 언어: lang-hide 추가
+      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(function(el) {
+        el.classList.remove('lang-hide');
+      });
+      document.querySelectorAll('[data-lang="' + other + '"]').forEach(function(el) {
+        el.classList.add('lang-hide');
+      });
       document.getElementById('html-root').setAttribute('lang', lang);
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
@@ -937,4 +944,29 @@
         : 'ROBAINTECH — Robot, AI and Human. Connecting Values at the Center.';
       try { localStorage.setItem('robaintech-lang', lang); } catch(e) {}
     }
-    (funct
+
+    // 초기화: 브라우저 언어 또는 저장된 설정 적용
+    (function() {
+      var saved = null;
+      try { saved = localStorage.getItem('robaintech-lang'); } catch(e) {}
+      if (!saved) {
+        var bl = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (bl.startsWith('ko')) saved = 'ko';
+      }
+      // 먼저 모든 [data-lang] 요소를 숨김
+      document.querySelectorAll('[data-lang]').forEach(function(el) {
+        el.classList.add('lang-hide');
+      });
+      // 선택된 언어만 표시
+      var activeLang = (saved === 'ko') ? 'ko' : 'en';
+      document.querySelectorAll('[data-lang="' + activeLang + '"]').forEach(function(el) {
+        el.classList.remove('lang-hide');
+      });
+      document.getElementById('html-root').setAttribute('lang', activeLang);
+      document.getElementById('btn-en').classList.toggle('active', activeLang === 'en');
+      document.getElementById('btn-ko').classList.toggle('active', activeLang === 'ko');
+    })();
+  </script>
+
+</body>
+</html>
